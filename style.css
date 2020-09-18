@@ -1,0 +1,138 @@
+/*Contrairement à certaines personnes j'ai pris pas mal de plaisir à bosser sur le projet donc merci à vous ;). PS:j'ai trouvé ça beaucoup plus facile 'grid' que 'flexbox'*/
+html{
+	height:100%;
+	min-height: 100%;
+	
+	
+	font-family:arial, sans-serif;
+	color: #5F6368;
+	}
+
+/*header*/
+#header {
+	display:grid;
+	grid-template-columns: 1fr 60px 60px 60px 90px;
+	grid-template-rows: 60px;
+	color: #5F6368;
+	grid-template-areas: ". Gmail Images Menu Connexion"
+
+	 }
+
+
+#Gmail{grid-area:Gmail;
+justify-content:center;
+align-self:center;}
+#Images{grid-area:Images;justify-content:center;
+align-self:center;}
+#Menu{grid-area:Menu;justify-content:center;
+align-self:center;}
+#Connexion{
+	grid-area:Connexion;
+	justify-content:center;
+	align-self:center;
+	background-color: #669cff;
+	color: white;
+	font-weight: bold ;
+	padding:10px 10px 10px 10px;
+	border-radius: 3px
+}
+
+a{
+	text-decoration: none;
+	color: #5F6368;
+	font-size:13px;
+}
+
+a:hover{text-decoration: underline}
+
+/*content*/
+#content{
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 100px 210px;
+	grid-template-areas: 
+	". Logo ."
+	". barrederecherche ."
+	". flexbox ."
+}
+
+
+#Logo{
+	grid-area: Logo;
+	text-align: center;
+	align-self:end;
+	padding-left:70px;
+}
+#barrederecherche{
+	grid-area:barrederecherche;
+	height:35px;
+	align-self:center;
+	border:1px solid rgba(0,0,0,0.15);
+	border-radius: 15px;
+	
+}
+
+#barrederecherche:hover {box-shadow:2px 2px 1px #d9d9d9;}
+
+#RechercheGoogle{grid-area:Recherchegoogle;
+border:0px solid black;
+	border-radius: 3px;
+	background-color: #ededed;
+	margin: 11px;
+	padding: 11px;
+	color: #5F6368}
+#RechercheGoogle:hover {box-shadow:2px 2px 1px #d9d9d9; border:1px solid #a1a1a1;}
+
+
+#Jaidelachance{grid-area:Jaidelachance;
+border:0px solid black;
+	border-radius: 3px;
+	background-color: #ededed;
+	margin: 11px;
+	padding: 11px;
+	color: #5F6368
+	}
+#Jaidelachance:hover {box-shadow:1px 1px 1px #d9d9d9; border:1px solid #a1a1a1;}
+
+#flexbox{
+	display:flexbox;
+	grid-area: flexbox;
+	align-self:flex-start;
+	justify-content: center;
+
+
+}
+
+/*footer*/
+#footer{
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	display: grid;
+	grid-template-columns: 7.5% 7.5% 7.5% 40% 12% 10% 7.5% 7.5%;
+	grid-template-rows: 30px 30px;
+	grid-template-areas: 
+	"France . . . . . . ."
+	"Publicité Entreprise Apropos CommentfonctionnelarechercheGoogle Infoconsommateurs Confidentialité Conditions Paramètres"
+	;
+	background-color: #f2f2f2;
+	align-items: center;
+	border: 1px solid #dedede;
+	color: #5F6368;
+
+
+	
+}
+
+#Infoconsommateurs{grid-area:Infoconsommateurs;
+	justify-content: left;color: #5F6368}
+#Confidentialité{grid-area:Confidentialité;color: #5F6368}
+#Conditions{grid-area:Conditions;color: #5F6368}
+#Paramètres{grid-area:Paramètres;color: #5F6368}
+#Publicité{grid-area:Publicité;color: #5F6368}
+#Entreprise{grid-area:Entreprise;color: #5F6368}
+#Apropos{grid-area:Apropos;color: #5F6368}
+#CommentfonctionnelarechercheGoogle{grid-area:CommentfonctionnelarechercheGoogle;color: #5F6368}
+
+
